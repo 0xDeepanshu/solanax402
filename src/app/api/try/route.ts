@@ -16,8 +16,8 @@ export async function POST(req: NextRequest) {
     price: {
       amount: "2500000", // $2.50 (6 decimal micro units)
       asset: {
-        address: "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU", // USDC (Devnet)
-        decimals : 2
+        address: "87RZw3tLZCkrqDTwX6g3qVuy7NhpV8vWS1zwqWp6ivtf", // USDC (Devnet)
+        decimals : 6
       },
     },
     network: 'solana-devnet',

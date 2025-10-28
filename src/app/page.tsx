@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { MyComponent } from "@/components/fetch";
+import Walletconnect from "@/components/fetch";
 export default function Home() {
   return (
    <>
-<MyComponent/>
+<Walletconnect/>
    </>
   );
 }
