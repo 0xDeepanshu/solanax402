@@ -23,7 +23,7 @@ import {
 } from "@solana/spl-token";
 import "@solana/wallet-adapter-react-ui/styles.css";
 
-const USDC_MINT_DEVNET = new PublicKey("87RZw3tLZCkrqDTwX6g3qVuy7NhpV8vWS1zwqWp6ivtf");
+const USDC_MINT_DEVNET = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
 const TOKEN_DECIMALS = 6; // USDC on Solana = 6 decimals
 const RPC_URL = "https://api.devnet.solana.com";
 
