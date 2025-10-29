@@ -23,6 +23,9 @@ This is a Next.js 16 application that implements a payment-enabled API using the
 - **Biome** - Linting and formatting tool
 - **Tailwind CSS** - Utility-first CSS framework
 - **TypeScript** - Typed JavaScript superset
+- **Solana libraries** - Wallet integration and blockchain interaction
+- **Privy** - Authentication library
+- **Thirdweb** - Blockchain development platform integration
 
 ## API Implementation
 The main functionality is in `src/app/api/try/route.ts`, which:
@@ -33,6 +36,14 @@ The main functionality is in `src/app/api/try/route.ts`, which:
 5. Setstles the payment after processing
 
 The business logic function `yourBusinessLogic(req)` is referenced but not implemented in the current codebase, suggesting it needs to be implemented separately.
+
+## Wallet Integration
+The application integrates with Solana wallets through:
+- Wallet adapter libraries for Phantom and Solflare
+- USDC token transfer functionality
+- Connection to Solana devnet
+
+The UI component at `src/components/fetch.tsx` handles the wallet connection and payment flow.
 
 ## Development Commands
 - `pnpm dev` - Start development server
@@ -45,6 +56,8 @@ The business logic function `yourBusinessLogic(req)` is referenced but not imple
 The application uses these environment variables:
 - `TREASURY_WALLET_ADDRESS` - Required for payment processing
 - `NEXT_PUBLIC_BASE_URL` - Base URL for API resources
+- `NEXT_PUBLIC_THIRDWEB_CLIENT_ID` - Thirdweb client ID
+- `THIRDWEB_SECRET_KEY` - Thirdweb secret key
 
 ## Coding Standards
 - Code is formatted using Biome with 2-space indentation
@@ -58,3 +71,5 @@ The application uses these environment variables:
 - USDC on Solana devnet is used for payment processing
 - The application requires proper environment variables for treasury wallet and base URL
 - The `yourBusinessLogic` function needs to be implemented to complete the API functionality
+- The application integrates with Thirdweb for additional blockchain functionality
+- Wallet connection is required for the payment flow to work properly

@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     network: 'solana-devnet',
     config: {
       description: 'AI Chat Request Example',
-      resource: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/try` as `${string}://${string}`,
+      resource: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:52493'}/api/try` as `${string}://${string}`,
     },
   });
 
