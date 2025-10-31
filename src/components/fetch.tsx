@@ -22,6 +22,7 @@ import {
   createTransferCheckedInstruction,
 } from "@solana/spl-token";
 import "@solana/wallet-adapter-react-ui/styles.css";
+import { log } from "console";
 
 const USDC_MINT_DEVNET = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
 const TOKEN_DECIMALS = 6; // USDC on Solana = 6 decimals
@@ -45,9 +46,10 @@ function USDCPayButton() {
 
     try {
       // Step 1: Call API to get payment requirement
-      const res = await fetch("/api/try", { method: "POST" });
+      const res = await fetch("/api/try", { method: "GET" });
       const data = await res.json();
-
+      console.log(data);
+      
       if (data.error === "Payment required" && data.accepts?.length > 0) {
         const info = data.accepts[0];
 
